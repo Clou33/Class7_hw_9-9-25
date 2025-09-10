@@ -7,7 +7,7 @@
 6. I would head to MookieWAF and click on bmc4, and copy ec2scipt.
 7. I fill out the name and information for the Instance, then I add the AMI and also select the t2 or t3 micro.
 8. I click create access keys so I can ssh into my instance.
-9. I then head to advance details drop down and paste the script
+9. I then head to advance details in the box for user data and paste the script, that was copied
 10. Then I review everything to make sure everything is correct.
 11. Once the instance is launched I would then click on instance and head to the instance summary
 12. Then I would click on the dns link to copy the address and then test it out on http:// and paste the link you copied.
