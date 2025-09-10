@@ -1,2 +1,12 @@
 # Class7_hw_9-9-25
-New HW
+1. Opened up SecutiryGroup, naming the security group.
+2. Afterwards I add the inbound group for HTTP for port 80, also adding anywhere Ipv4. Also I add port 22 for ssh into my machine if I need to.
+3. From there I skip the outbound rules, since I won't need to do anything with that.
+4. I add tags to identify the security group.
+5. Then I head to the Instance tab and click on create instances.
+6. I fill out the name and information for the Instance, then I add the AMI and also select the t2 or t3 micro.
+7. I click create access keys so I can ssh into my instance.
+8. Then I review everything to make sure everything is correct.
+9. Once the instance is launched I would then click on instance and head to the instance summary
+10. Then I would click on the dns link to copy the address and then test it out on http:// and paste the link you copied.
+11. 
