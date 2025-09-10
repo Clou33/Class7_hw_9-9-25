@@ -31,6 +31,8 @@ echo "
 <h1>AWS Instance Details</h1>
 <h1>Samurai Katana</h1>
 
+<p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!</p>
+
 <br>
 # insert an image or GIF
 <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
