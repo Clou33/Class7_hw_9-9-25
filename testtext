@@ -37,6 +37,8 @@ echo "
 <img src="https://i.pinimg.com/originals/4c/a6/08/4ca60801263a3bc88dbae1186d31fae2.gif">
 
 <br>
+<p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!
+With this class, I will net 170K per year. I found my wife on a party yacht on Jeju Island. Her name is Jia Han!" </p> 
 
 <p><b>Instance Name:</b> $(hostname -f) </p>
 <p><b>Instance Private Ip Address: </b> ${local_ipv4}</p>
