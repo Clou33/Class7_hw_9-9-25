@@ -32,7 +32,7 @@ echo "
 <h1>Samurai Katana</h1>
 
 <p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!
-"With this class, I will net 170K per year</p>
+"With this class, I will net 170K per year!"</p>
 
 <br>
 # insert an image or GIF
