@@ -38,6 +38,10 @@ echo "
 <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
 <br>
 
+<img src="https://www.tomplanmytrip.com/wp-content/uploads/2024/07/La-Barra-Juanchaco-Choco-Pacific-Coast-Colombia-2.jpg" alt="La Barra Bahia Malaga-Pacific Coast Colombia">
+<br>
+
+
 <p><b>Instance Name:</b> $(hostname -f) </p>
 <p><b>Instance Private Ip Address: </b> ${local_ipv4}</p>
 <p><b>Availability Zone: </b> ${az}</p>
