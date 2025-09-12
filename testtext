@@ -30,8 +30,8 @@ echo "
 <div>
 <h1>AWS Instance Details</h1>
 <h1>Samurai Katana</h1>
-<p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!
-With this class, I will net 170K per year. I found my wife on a party yacht on Jeju Island. Her name is Jia Han!" </p> 
+<p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!"</p>       
+<p>With this class, I will net 170K per year. I found my wife on a party yacht on Jeju Island. Her name is Jia Han!" </p> 
 
 <br>
 # insert an image or GIF
