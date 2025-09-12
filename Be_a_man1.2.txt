@@ -39,9 +39,9 @@ With this class, I will net 170K per year."</p>
 <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
 <br>
 
-<br>
+
 <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);" src="https://i.pinimg.com/originals/4c/a6/08/4ca60801263a3bc88dbae1186d31fae2.gif">
-<br>
+
 
 <p>I found my wife on a party yacht in Jeju Island. Her name is Jia Han!</p>
 
