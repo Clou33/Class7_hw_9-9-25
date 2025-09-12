@@ -31,8 +31,6 @@ echo "
 <h1>AWS Instance Details</h1>
 <h1>Samurai Katana</h1>
 
-
-
 <br>
 # insert an image or GIF
 <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"> <br>
