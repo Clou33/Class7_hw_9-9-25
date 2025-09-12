@@ -31,12 +31,15 @@ echo "
 <h1>AWS Instance Details</h1>
 <h1>Samurai Katana</h1>
 
+<p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!" "With this class, I will net 170K per year. 
+"I found my wife on a party yacht on Jeju Island. Her name is Jia Han!" </p> 
+
 <br>
 # insert an image or GIF
-<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"> <br>
-<img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);" src="https://i.pinimg.com/originals/4c/a6/08/4ca60801263a3bc88dbae1186d31fae2.gif">
-<p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!
-With this class, I will net 170K per year. I found my wife on a party yacht on Jeju Island. Her name is Jia Han!" </p> 
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+<img src="https://i.pinimg.com/originals/4c/a6/08/4ca60801263a3bc88dbae1186d31fae2.gif">
+<br>
+
 
 <p><b>Instance Name:</b> $(hostname -f) </p>
 <p><b>Instance Private Ip Address: </b> ${local_ipv4}</p>
@@ -46,6 +49,9 @@ With this class, I will net 170K per year. I found my wife on a party yacht on J
 </body>
 </html>
 " > /var/www/html/index.html
+
+# Clean up the temp files
+rm -f /tmp/local_ipv4 /tmp/az /tmp/macid
 
 # Clean up the temp files
 rm -f /tmp/local_ipv4 /tmp/az /tmp/macid
