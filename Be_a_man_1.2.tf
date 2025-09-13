@@ -13,7 +13,7 @@ terraform {
 
 resource "aws_vpc" "Gitgud1" {
   cidr_block = "10.32.0.0/16"
-
+  enable_dns_hostnames = true
   tags = {
     Name = "pain"
     Service = "application1"
@@ -101,6 +101,13 @@ resource "aws_security_group" "newlineofdefense_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
 
   egress {
@@ -129,68 +136,7 @@ resource "aws_instance" "be_a_man_2" {
   tags = {
     Name = "be_a_man_2"
   }
-user_data = base64encode(<<EOF
-#!/bin/bash
-# Use this for your user data (script from top to bottom)
-# install httpd (Linux 2 version)
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-
-# Get the IMDSv2 token
-TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
-
-# Background the curl requests
-curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/local-ipv4 &> /tmp/local_ipv4 &
-curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/placement/availability-zone &> /tmp/az &
-curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/network/interfaces/macs/ &> /tmp/macid &
-wait
-
-macid=$(cat /tmp/macid)
-local_ipv4=$(cat /tmp/local_ipv4)
-az=$(cat /tmp/az)
-vpc=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/network/interfaces/macs/${macid}/vpc-id)
-
-echo "
-<!doctype html>
-<html lang=\"en\" class=\"h-100\">
-<head>
-<title>Details for EC2 instance</title>
-</head>
-<body>
-<div>
-<h1>AWS Instance Details</h1>
-<h1>Samurai Katana</h1>
-
-<p> “I, Davey Wheeling Jr, thank Theo and *insert group leader name here*, for teaching me about EC2s in AWS. One step closer to escaping Keisha!" "With this class, I will net 170K per year. 
-"I found my wife on a party yacht on Jeju Island. Her name is Jia Han!" </p> 
-
-<br>
-# insert an image or GIF
-<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
-<img src="https://i.pinimg.com/originals/4c/a6/08/4ca60801263a3bc88dbae1186d31fae2.gif">
-<br>
-
-
-<p><b>Instance Name:</b> $(hostname -f) </p>
-<p><b>Instance Private Ip Address: </b> ${local_ipv4}</p>
-<p><b>Availability Zone: </b> ${az}</p>
-<p><b>Virtual Private Cloud (VPC):</b> ${vpc}</p>
-</div>
-</body>
-</html>
-" > /var/www/html/index.html
-
-# Clean up the temp files
-rm -f /tmp/local_ipv4 /tmp/az /tmp/macid
- EOF
-  )
-
+user_data = file("${path.root}/Be_a_man1.2.txt")
 
 }
 
-output "instance_public_dns" {
-  value       = aws_instance.be_a_man_2.public_dns
-  description = "The public DNS name of the EC2 instance."
-}
